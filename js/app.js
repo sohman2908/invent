@@ -284,7 +284,7 @@
     renderPage();
     setReadButton();
     renderShelf();
-    $('#read').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    $('#book').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
   }
 
   readBtn.addEventListener('click', function () {
@@ -605,6 +605,9 @@
   });
 
   /* ---------------- Start ---------------- */
+
+  var heroArt = $('#heroArt');
+  if (heroArt) heroArt.innerHTML = storyArt('garden', 3);
 
   setRate(rate);
   renderPage();
